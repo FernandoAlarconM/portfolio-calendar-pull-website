@@ -93,3 +93,42 @@ The pages document all four requested scopes:
 than the minimum necessary. If the app only reads events, drop to
 `calendar.events.readonly` + `openid` + `userinfo.email` and remove the extra rows from
 `index.html` and `privacy.html` before submitting.
+
+## Known blocker — github.io is rejected as an Authorized domain
+
+Status as of 5 September 2026.
+
+Branding verification cleared two of the three original issues once these pages went live:
+the privacy policy content and the app-name mismatch both passed. One issue persists:
+
+> The website of your home page URL
+> "https://fernandoalarconm.github.io/portfolio-calendar-pull-website/" is not registered to you.
+
+This is **not** a misconfiguration. All of the following were confirmed correct before a fresh
+verification attempt was submitted, and it still failed:
+
+| Check | State |
+|---|---|
+| Cloud project sole Owner | `fernando.alarcon.agent@gmail.com` |
+| Search Console property | `https://fernandoalarconm.github.io/` — URL prefix, **Verified**, Owner |
+| Search Console owner account | `fernando.alarcon.agent@gmail.com` — same as project Owner |
+| Verification file | `https://fernandoalarconm.github.io/google6c1fb6337c4d4395.html` → HTTP 200 |
+| Authorized domain | `fernandoalarconm.github.io` |
+| Home / privacy / terms | HTTP 200 |
+
+Read the error wording carefully: *"not registered to you"*, not "ownership could not be
+verified". `github.io` is registered to GitHub. Search Console proves you control the content
+at that subdomain; it does not make you the domain registrant. This check appears to want the
+latter, so free hosting subdomains (`github.io`, `pages.dev`, `netlify.app`, `vercel.app`) do
+not clear it.
+
+### Options
+
+1. **Custom domain (~$12/yr).** Register a domain, point it at GitHub Pages via CNAME — hosting
+   and HTTPS stay free. Verify it in Search Console as a **Domain property** using a DNS TXT
+   record. You are then the registrant, which is what the check wants. Permanent fix.
+2. **Request human review.** In the issues panel choose *"I believe the issues found are
+   incorrect"* and cite the Search Console verification. Free, and worth trying first.
+3. **Stay in Testing mode.** No verification and no branding check at all; add yourself as a
+   test user. Free. Cost: with sensitive Calendar scopes the refresh token expires every 7 days,
+   so you re-authorise weekly. Fine for a personal tool, not for distribution.
