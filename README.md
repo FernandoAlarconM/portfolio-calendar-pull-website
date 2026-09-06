@@ -25,17 +25,17 @@ and cannot be renamed.
 
 | File | Becomes |
 |---|---|
-| `site/index.html` | Application home page |
-| `site/privacy.html` | Application privacy policy link |
-| `site/terms.html` | Application terms of service link |
-| `site/style.css` | Shared styling (light + dark) |
-| `site/.nojekyll` | Stops GitHub Pages running Jekyll |
+| `docs/index.html` | Application home page |
+| `docs/privacy.html` | Application privacy policy link |
+| `docs/terms.html` | Application terms of service link |
+| `docs/style.css` | Shared styling (light + dark) |
+| `docs/.nojekyll` | Stops GitHub Pages running Jekyll |
 
 The `<h1>` on `index.html` is exactly `Portfolio Calendar Pull` — this is what fixes issue 3.
 
 ## Local check
 
-    cd ~/Documents/portfolio-calendar-pull-website/site
+    cd ~/Documents/portfolio-calendar-pull-website/docs
     python3 -m http.server 8765
 
 Open http://localhost:8765/ and confirm all three pages load and cross-link.
@@ -49,7 +49,7 @@ Open http://localhost:8765/ and confirm all three pages load and cross-link.
     gh repo create portfolio-calendar-pull-website --public --source=. --push
 
 Then: repo → Settings → Pages → Source = `Deploy from a branch`,
-Branch = `main`, Folder = `/site` → Save.
+Branch = `main`, Folder = `/docs` → Save.
 
 Live URLs (wait ~2 minutes for the first build):
 
@@ -63,7 +63,7 @@ Live URLs (wait ~2 minutes for the first build):
    (the same account that owns the Cloud project — note the console URL uses `authuser=1`).
 2. Add a **URL prefix** property: `https://fernandoalarconm.github.io/`
 3. Choose the **HTML file** verification method, download `googleXXXXXXX.html`,
-   drop it into `site/`, commit, push, then click Verify.
+   drop it into `docs/`, commit, push, then click Verify.
 
 ## Update the OAuth consent screen
 
