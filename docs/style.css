@@ -31,3 +31,7 @@ nav a{margin-right:20px}
 footer{border-top:1px solid var(--line);margin-top:56px;padding-top:20px;
        color:var(--muted);font-size:14px}
 ul{padding-left:22px}
+
+.brand{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.brand img{border-radius:14px;flex:none}
+.brand h1{margin:0}

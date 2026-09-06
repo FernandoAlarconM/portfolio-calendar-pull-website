@@ -30,6 +30,9 @@ and cannot be renamed.
 | `docs/terms.html` | Application terms of service link |
 | `docs/style.css` | Shared styling (light + dark) |
 | `docs/.nojekyll` | Stops GitHub Pages running Jekyll |
+| `docs/logo.png` | Logo shown on the website |
+| `brand/logo-120.png` | The 120x120 app logo to upload to the consent screen |
+| `brand/make_logo.py` | Generates every logo file from scratch (see `brand/README.md`) |
 
 The `<h1>` on `index.html` is exactly `Portfolio Calendar Pull` — this is what fixes issue 3.
 
@@ -72,6 +75,7 @@ In https://console.cloud.google.com/auth/branding?project=portfolio-calendar-pul
 - Application home page → `https://fernandoalarconm.github.io/portfolio-calendar-pull-website/`
 - Application privacy policy link → `.../privacy.html`
 - Application terms of service link → `.../terms.html`
+- App logo → upload `brand/logo-120.png`
 - Authorized domains → add `fernandoalarconm.github.io`
 - Save, then open the "Branding verification issues" panel and select
   **"I have fixed the issues"** → Proceed.
