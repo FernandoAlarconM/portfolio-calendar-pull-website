@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio Calendar Pull</title>
+<meta name="description" content="Portfolio Calendar Pull reads events from your Google Calendar and consolidates them into a single portfolio view.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Portfolio Calendar Pull</h1>
+  <p class="tagline">Reads events from your Google Calendar and consolidates them into a single portfolio view.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+</header>
+
+<h2>What this app does</h2>
+<p>
+  Portfolio Calendar Pull is a personal tool that connects to your Google Calendar,
+  pulls your scheduled events, and organises them into a consolidated portfolio view
+  so you can see how your time is allocated across projects and commitments.
+</p>
+
+<h2>How it works</h2>
+<ul>
+  <li>You sign in with your Google account and grant access to your calendar.</li>
+  <li>The app reads your calendar events through the Google Calendar API.</li>
+  <li>Events are grouped and summarised into a portfolio view.</li>
+  <li>You can revoke access at any time from your Google Account settings.</li>
+</ul>
+
+<h2>Google account access</h2>
+<p>
+  Portfolio Calendar Pull requests the following Google OAuth scopes. Each one is used
+  only for the purpose described below.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Scope</th><th>Why it is requested</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>https://www.googleapis.com/auth/calendar.events.readonly</code></td>
+      <td>Read your calendar events to build the portfolio view.</td>
+    </tr>
+    <tr>
+      <td><code>https://www.googleapis.com/auth/calendar.readonly</code></td>
+      <td>Read the list of your calendars so events can be attributed to the correct calendar.</td>
+    </tr>
+    <tr>
+      <td><code>https://www.googleapis.com/auth/calendar</code></td>
+      <td>Create or update events when you explicitly ask the app to write back to your calendar.</td>
+    </tr>
+    <tr>
+      <td><code>openid</code>, <code>https://www.googleapis.com/auth/userinfo.email</code></td>
+      <td>Identify your account so the app can sign you in and keep your data separate.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="card">
+  <p style="margin:0">
+    Portfolio Calendar Pull's use of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </p>
+</div>
+
+<h2>Contact</h2>
+<p>
+  Questions about this app, your data, or a deletion request:
+  <a href="mailto:fernando.alarcon.agent@gmail.com">fernando.alarcon.agent@gmail.com</a>
+</p>
+
+<footer>
+  <p>Portfolio Calendar Pull &middot; Developed by Fernando Alarcón &middot;
+  <a href="privacy.html">Privacy Policy</a> &middot;
+  <a href="terms.html">Terms of Service</a></p>
+</footer>
+
+</div>
+</body>
+</html>
