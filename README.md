@@ -80,20 +80,16 @@ In https://console.cloud.google.com/auth/branding?project=portfolio-calendar-pul
 - Save, then open the "Branding verification issues" panel and select
   **"I have fixed the issues"** → Proceed.
 
-## Open item — scope minimisation
+## Scopes
 
-The pages document all four requested scopes:
+The project requests exactly one scope:
 
-- `https://www.googleapis.com/auth/calendar.events.readonly`
 - `https://www.googleapis.com/auth/calendar.readonly`
-- `https://www.googleapis.com/auth/calendar` (full read/write)
-- `openid` + `https://www.googleapis.com/auth/userinfo.email`
 
-`calendar` (full) already covers both readonly scopes. Google rejects apps that request more
-than the minimum necessary. If the app only reads events, drop to
-`calendar.events.readonly` + `openid` + `userinfo.email` and remove the extra rows from
-`index.html` and `privacy.html` before submitting.
-
+`docs/index.html`, `docs/privacy.html` and `docs/terms.html` document that scope and nothing
+else. Google's reviewers compare the privacy policy against the scopes the project actually
+requests, so if the scope list in the Cloud console ever changes, update all three pages in
+the same commit.
 ## Known blocker — github.io is rejected as an Authorized domain
 
 Status as of 5 September 2026.

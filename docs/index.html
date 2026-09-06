@@ -41,8 +41,8 @@
 
 <h2>Google account access</h2>
 <p>
-  Portfolio Calendar Pull requests the following Google OAuth scopes. Each one is used
-  only for the purpose described below.
+  Portfolio Calendar Pull requests a single Google OAuth scope, and uses it only for the
+  purpose described below.
 </p>
 
 <table>
@@ -51,20 +51,10 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>https://www.googleapis.com/auth/calendar.events.readonly</code></td>
-      <td>Read your calendar events to build the portfolio view.</td>
-    </tr>
-    <tr>
       <td><code>https://www.googleapis.com/auth/calendar.readonly</code></td>
-      <td>Read the list of your calendars so events can be attributed to the correct calendar.</td>
-    </tr>
-    <tr>
-      <td><code>https://www.googleapis.com/auth/calendar</code></td>
-      <td>Create or update events when you explicitly ask the app to write back to your calendar.</td>
-    </tr>
-    <tr>
-      <td><code>openid</code>, <code>https://www.googleapis.com/auth/userinfo.email</code></td>
-      <td>Identify your account so the app can sign you in and keep your data separate.</td>
+      <td>Read your calendars and their events, so the app can build the portfolio view.
+          This scope is read-only: it gives the app no ability to create, change or delete
+          anything in your calendar.</td>
     </tr>
   </tbody>
 </table>

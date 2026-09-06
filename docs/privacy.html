@@ -40,9 +40,8 @@
 
 <h2>2. Google user data we access</h2>
 <p>
-  The app accesses Google user data only through the Google Calendar API and Google Sign-In,
-  and only after you grant consent on the Google OAuth consent screen. We request the
-  following scopes:
+  The app accesses Google user data only through the Google Calendar API, and only after you
+  grant consent on the Google OAuth consent screen. We request a single scope:
 </p>
 
 <table>
@@ -51,24 +50,12 @@
   </thead>
   <tbody>
     <tr>
-      <td><code>https://www.googleapis.com/auth/calendar.events.readonly</code></td>
-      <td>Event title, description, location, start and end times, attendee list, recurrence, and event IDs.</td>
-      <td>To read your events and build the consolidated portfolio view.</td>
-    </tr>
-    <tr>
       <td><code>https://www.googleapis.com/auth/calendar.readonly</code></td>
-      <td>The list of calendars in your account, with their names, IDs, time zones and access roles.</td>
-      <td>To attribute each event to the correct calendar and respect your calendar time zones.</td>
-    </tr>
-    <tr>
-      <td><code>https://www.googleapis.com/auth/calendar</code></td>
-      <td>Write access to calendars and events.</td>
-      <td>To create or modify events <em>only</em> when you explicitly instruct the app to do so. The app never writes to your calendar automatically or in the background.</td>
-    </tr>
-    <tr>
-      <td><code>openid</code> and <code>https://www.googleapis.com/auth/userinfo.email</code></td>
-      <td>Your Google account identifier and email address.</td>
-      <td>To authenticate you and keep your data separate from any other user's data.</td>
+      <td>The list of calendars in your account (names, IDs, time zones), and the events in
+          them: title, description, location, start and end times, attendees, recurrence and
+          event IDs.</td>
+      <td>To read your events and build the consolidated portfolio view, attributing each
+          event to the correct calendar and respecting your calendar time zones.</td>
     </tr>
   </tbody>
 </table>
@@ -78,9 +65,11 @@
 <ul>
   <li>Retrieving your calendar events and displaying them in a consolidated portfolio view.</li>
   <li>Grouping and summarising events so you can see how your time is allocated.</li>
-  <li>Writing an event back to your calendar when you explicitly request it.</li>
-  <li>Signing you in and associating your session with your account.</li>
 </ul>
+<p>
+  The scope requested is read-only. The app cannot and does not create, modify or delete
+  events, calendars or any other data in your Google account.
+</p>
 <p>We do <strong>not</strong> use your Google user data for any other purpose.</p>
 
 <h2>4. What we never do</h2>
